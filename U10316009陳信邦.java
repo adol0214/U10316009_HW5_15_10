@@ -1,3 +1,31 @@
+/**
+ * Name:陳信邦
+ * ID: U10316009
+ * Ex: 15.10
+ */
+
+import java.util.ArrayList;
+
+public class Test{
+	public static void main(String[] args){
+		MyStack MS1 = new MyStack();
+		
+		MS1.push("0");
+		MS1.push("00");
+		MS1.push("000");
+
+		MyStack MS2 = (MyStack)MS1.clone();
+
+		MS2.push("1");
+		MS2.push("11");
+		MS2.push("111");
+
+		System.out.println(MS1.getSize());
+		System.out.println(MS2.getSize());
+		
+	}
+}
+
 class MyStack implements Cloneable{
 	private ArrayList<Object> list = new ArrayList<Object>();
 	//判斷陣列是不是空的
